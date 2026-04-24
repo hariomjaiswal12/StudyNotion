@@ -35,9 +35,9 @@ Users can sign up, explore courses, purchase courses, and track learning progres
 
 ![Course Details Page](./screenshorts/course-details.png)
 
-### User Dashboard
+### My Profile Page
 
-![User Dashboard](./screenshorts/user-dashboard.png)
+![My Profile Page](./screenshorts/profile-page.png)
 
 ### Instructor Dashboard
 
