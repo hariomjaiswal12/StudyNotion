@@ -21,27 +21,27 @@ Users can sign up, explore courses, purchase courses, and track learning progres
 
 ### Home Page
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshorts/home.png)
 
 ### Add Course Page
 
-![Add Course Page](./screenshots/add-course-page.png)
+![Add Course Page](./screenshorts/add-course-page.png)
 
 ### Cart Page
 
-![Cart Page](./screenshots/cart-page.png)
+![Cart Page](./screenshorts/cart-page.png)
 
 ### Course Details Page
 
-![Course Details Page](./screenshots/course-details.png)
+![Course Details Page](./screenshorts/course-details.png)
 
 ### User Dashboard
 
-![User Dashboard](./screenshots/user-dashboard.png)
+![User Dashboard](./screenshorts/user-dashboard.png)
 
 ### Instructor Dashboard
 
-![Instructor Dashboard](./screenshots/instructor-dashboard.png)
+![Instructor Dashboard](./screenshorts/instructor-dashboard.png)
 
 ---
 
@@ -180,7 +180,7 @@ RAZORPAY_SECRET=your_secret
 
 **Hariom Jaiswal**
 📧 [omjaiswal942@gmail.com](mailto:omjaiswal942@gmail.com)
-🔗 🔗 GitHub: [hariomjaiswal12](https://github.com/hariomjaiswal12)
+🔗GitHub: [hariomjaiswal12](https://github.com/hariomjaiswal12)
 
 ---
 
