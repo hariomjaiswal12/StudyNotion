@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # StudyNotion
 
@@ -89,3 +90,7 @@ This project is licensed under the MIT License.
 
 For questions or collaboration, please contact omdwivedi50126@gmail.com.
 
+=======
+# StudyNotion
+StudyNotion - Full Stack MERN EdTech Platform
+>>>>>>> 095dcfa6753e8b69064651b349da362fe378062f
