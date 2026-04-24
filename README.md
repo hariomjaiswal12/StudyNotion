@@ -1,96 +1,189 @@
-<<<<<<< HEAD
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-darkgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-# StudyNotion
+# StudyNotion🎓
 
-## Overview
+A full-stack **MERN EdTech Platform** that connects instructors and students in one place.
+Users can sign up, explore courses, purchase courses, and track learning progress.
 
-*StudyNotion* is an online learning platform designed to connect instructors with students, enabling the creation, management, and sale of educational courses. The platform allows instructors to create and upload course content, including videos and documents, while students can browse, enroll in courses, and track their learning progress.
+---
 
-## Features
+## 🌐 Live Demo
 
-- *User Authentication*: Secure login, signup, and password reset using JWT, with role-based access control.
-- *Course Management*: Instructors can create, update, and delete courses, including adding multimedia content.
-- *Course Enrollment*: Students can browse available courses, enroll, and track their progress.
-- *Payment Integration*: Secure payment processing for course purchases via Razorpay.
-- *Rating and Reviews*: Students can rate and review courses, providing feedback for instructors and helping other students choose courses.
+🔗 Frontend: [Live Site](https://study-notion-one-olive.vercel.app)
+🔗 Backend API: [API Server](https://studynotion-backend-hariom.onrender.com)
 
-## Tech Stack
+---
 
-- *Frontend*: React, HTML, CSS, Tailwind CSS
-- *Backend*: Node.js, Express.js
-- *Database*: MongoDB
-- *Payment Gateway*: Razorpay
-- *Authentication*: JWT (JSON Web Tokens)
-- *Hosting*: frontend-> Netlify , Backend->Render
+## 📸 Project Screenshots
 
-## Getting Started
+### Home Page
 
-### Prerequisites
+![Home Page](./screenshots/home.png)
 
-- *Node.js* (v14.x or higher)
-- *MongoDB* (local instance or a cloud service like MongoDB Atlas)
-- *Razorpay* account for payment integration
+### Add Course Page
 
-### Installation
+![Add Course Page](./screenshots/add-course-page.png)
 
-1. *Clone the repository:*
-   bash
-   git clone https://github.com/OmDwivedi2003/studynotion.git
-   cd studynotion
-   
+### Cart Page
 
-2. *Install dependencies for the backend and frontend:*
-   bash
-   cd backend
-   npm install
-   cd ../frontend
-   npm install
-   
+![Cart Page](./screenshots/cart-page.png)
 
-3. *Set up environment variables:*
-   - Create a .env file in the backend directory with the following variables:
-     env
-     MONGODB_URI=your_mongodb_uri
-     JWT_SECRET=your_jwt_secret
-     RAZORPAY_KEY_ID=your_razorpay_key_id
-     RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-     
+### Course Details Page
 
-4. *Run the development server:*
-   - For backend:
-     bash
-     cd backend
-     npm run dev
-     
-   - For frontend:
-     bash
-     cd frontend
-     npm start
-     
+![Course Details Page](./screenshots/course-details.png)
 
-5. *Access the application:*
-   - Open your browser and navigate to http://localhost:3000 for the frontend.
-   - The backend server runs on http://localhost:4000.
+### User Dashboard
 
-## Usage
+![User Dashboard](./screenshots/user-dashboard.png)
 
-- *Instructors*: Sign up as an instructor to create and manage courses.
-- *Students*: Sign up as a student to browse and enroll in courses.
-- *Payments*: Purchase courses securely through the integrated Razorpay payment gateway.
+### Instructor Dashboard
 
-## Contributing
+![Instructor Dashboard](./screenshots/instructor-dashboard.png)
 
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+---
 
-## License
+## 🚀 Features
 
-This project is licensed under the MIT License.
+### 👨‍🎓 Student Features
 
-## Contact
+* User Signup / Login with OTP verification
+* Browse all available courses
+* Purchase premium courses
+* View enrolled courses
+* Track progress while learning
+* Manage profile and settings
 
-For questions or collaboration, please contact omdwivedi50126@gmail.com.
+### 👨‍🏫 Instructor Features
 
-=======
-# StudyNotion
-StudyNotion - Full Stack MERN EdTech Platform
->>>>>>> 095dcfa6753e8b69064651b349da362fe378062f
+* Create and upload courses
+* Add sections, lectures, videos
+* Manage published courses
+* Dashboard analytics
+
+### 🔐 Authentication
+
+* JWT based login system
+* OTP email verification
+* Reset password via email
+
+### 💳 Payments
+
+* Razorpay payment gateway integration
+
+### ☁️ Media Upload
+
+* Cloudinary image/video upload support
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Redux Toolkit
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+
+### Other Tools
+
+* JWT Authentication
+* Nodemailer
+* Razorpay
+* Cloudinary
+
+---
+
+## 📂 Folder Structure
+
+```bash
+StudyNotion/
+│── src/              # Frontend React App
+│── server/           # Backend API
+│── screenshots/      # README Images
+│── package.json
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/hariomjaiswal12/StudyNotion.git
+cd StudyNotion
+```
+
+### Install Dependencies
+
+```bash
+npm install
+cd server
+npm install
+```
+
+### Run Frontend
+
+```bash
+npm start
+```
+
+### Run Backend
+
+```bash
+cd server
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create `.env` file in server folder:
+
+```env
+PORT=5000
+MONGODB_URL=your_mongodb_url
+JWT_SECRET=your_secret
+MAIL_USER=your_email
+MAIL_PASS=your_password
+CLOUD_NAME=your_cloudinary_name
+API_KEY=your_cloudinary_key
+API_SECRET=your_cloudinary_secret
+RAZORPAY_KEY=your_key
+RAZORPAY_SECRET=your_secret
+```
+
+---
+
+## 📈 Future Improvements
+
+* Certificate Generation
+* Course Reviews & Ratings
+* AI Learning Assistant
+* Admin Panel
+* Notifications
+
+---
+
+## 👨‍💻 Author
+
+**Hariom Jaiswal**
+📧 [omjaiswal942@gmail.com](mailto:omjaiswal942@gmail.com)
+🔗 🔗 GitHub: [hariomjaiswal12](https://github.com/hariomjaiswal12)
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
