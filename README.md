@@ -21,27 +21,27 @@ Users can sign up, explore courses, purchase courses, and track learning progres
 
 ### Home Page
 
-![Home Page](./screenshorts/home.png)
+![Home Page](./screenshots/home.png)
 
 ### Add Course Page
 
-![Add Course Page](./screenshorts/add-course-page.png)
+![Add Course Page](./screenshots/add-course-page.png)
 
 ### Cart Page
 
-![Cart Page](./screenshorts/cart-page.png)
+![Cart Page](./screenshots/cart-page.png)
 
 ### Course Details Page
 
-![Course Details Page](./screenshorts/course-details.png)
+![Course Details Page](./screenshots/course-details.png)
 
 ### My Profile Page
 
-![My Profile Page](./screenshorts/profile-page.png)
+![My Profile Page](./screenshots/profile-page.png)
 
 ### Instructor Dashboard
 
-![Instructor Dashboard](./screenshorts/instructor-dashboard.png)
+![Instructor Dashboard](./screenshots/instructor-dashboard.png)
 
 ---
 
