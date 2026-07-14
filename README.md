@@ -14,7 +14,7 @@ Users can sign up, explore courses, purchase courses, and track learning progres
 
 🔗 Frontend: [Live Site](https://study-notion-one-olive.vercel.app)
 🔗 Backend API: [API Server](https://studynotion-backend-hariom.onrender.com)
-
+🔗 Live Demo: [Live Site](https://study-notion-one-olive.vercel.app)
 ---
 
 ## 📸 Project Screenshots
