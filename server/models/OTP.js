@@ -48,7 +48,7 @@ OTPSchema.pre("save",async function(next){ // explore why next pass as argument 
     console.log("New document saved to database");
 
     if (this.isNew) {
-		await sendVerificationEmail(this.email, this.otp);
+		sendVerificationEmail(this.email, this.otp);
 	}
     next(); // next middleware me chale jao
 
