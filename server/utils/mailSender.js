@@ -1,6 +1,8 @@
 const nodemailer = require("nodemailer");
 //require("dotenv").config()
 const dotenv = require('dotenv');
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
 dotenv.config();
 
 // OTP ko mail me send kar sake isliye hmne mailsender create kiya.
