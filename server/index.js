@@ -33,7 +33,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://study-notion-one-olive.vercel.app"
+      "http://localhost:5173",
+      "https://study-notion-one-olive.vercel.app",
+      "https://study-notion-one.olive.vercel.app"
     ],
     credentials: true,
   })

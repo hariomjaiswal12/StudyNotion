@@ -30,7 +30,7 @@ exports.sendotp = async (req, res) => {
         //  else generate otp
         var otp = otpGenerator.generate(6, {
             upperCaseAlphabets: false,
-            lowerCaseAlphabet: false,
+            lowerCaseAlphabets: false,
             specialChars: false,
         });
         console.log("OTP generated:", otp);
@@ -42,7 +42,7 @@ exports.sendotp = async (req, res) => {
         while (result) {
             otp = otpGenerator.generate(6, {
                 upperCaseAlphabets: false,
-                lowerCaseAlphabet: false,   // bahit ganda code hai bruteforce hAI ye
+                lowerCaseAlphabets: false,   // bahit ganda code hai bruteforce hAI ye
                 specialChars: false,
             });
             result = await OTP.findOne({ otp: otp });
