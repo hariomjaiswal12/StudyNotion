@@ -1,13 +1,57 @@
 const nodemailer = require("nodemailer");
-//require("dotenv").config()
 const dotenv = require('dotenv');
 const dns = require('dns');
+const https = require("https");
 dns.setDefaultResultOrder('ipv4first');
 dotenv.config();
+
+const sendResendEmail = (email, title, body) => {
+    return new Promise((resolve, reject) => {
+        const data = JSON.stringify({
+            from: "StudyNotion <onboarding@resend.dev>",
+            to: [email],
+            subject: title,
+            html: body
+        });
+
+        const options = {
+            hostname: "api.resend.com",
+            path: "/emails",
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
+                "Content-Type": "application/json",
+                "Content-Length": data.length
+            }
+        };
+
+        const req = https.request(options, (res) => {
+            let resData = "";
+            res.on("data", chunk => resData += chunk);
+            res.on("end", () => {
+                if (res.statusCode >= 200 && res.statusCode < 300) {
+                    resolve(JSON.parse(resData));
+                } else {
+                    reject(new Error(`Resend failed with status ${res.statusCode}: ${resData}`));
+                }
+            });
+        });
+
+        req.on("error", err => reject(err));
+        req.write(data);
+        req.end();
+    });
+};
 
 // OTP ko mail me send kar sake isliye hmne mailsender create kiya.
 const mailSender = async (email, title, body) => {
     try {
+        if (process.env.RESEND_API_KEY) {
+            console.log("Sending email via Resend API...");
+            return await sendResendEmail(email, title, body);
+        }
+
+        console.log("Sending email via Nodemailer SMTP...");
         // TRANSPORTER
         let transporter = nodemailer.createTransport({
             host: process.env.MAIL_HOST,
