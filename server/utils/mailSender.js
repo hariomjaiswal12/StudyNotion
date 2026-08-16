@@ -5,6 +5,48 @@ const https = require("https");
 dns.setDefaultResultOrder('ipv4first');
 dotenv.config();
 
+const sendBrevoEmail = (email, title, body) => {
+    return new Promise((resolve, reject) => {
+        const data = JSON.stringify({
+            sender: {
+                name: "StudyNotion",
+                email: process.env.MAIL_USER || "omjaiswal942@gmail.com"
+            },
+            to: [{ email: email }],
+            subject: title,
+            htmlContent: body
+        });
+
+        const options = {
+            hostname: "api.brevo.com",
+            path: "/v3/smtp/email",
+            method: "POST",
+            headers: {
+                "api-key": process.env.BREVO_API_KEY,
+                "Content-Type": "application/json",
+                "Content-Length": data.length,
+                "accept": "application/json"
+            }
+        };
+
+        const req = https.request(options, (res) => {
+            let resData = "";
+            res.on("data", chunk => resData += chunk);
+            res.on("end", () => {
+                if (res.statusCode >= 200 && res.statusCode < 300) {
+                    resolve(JSON.parse(resData));
+                } else {
+                    reject(new Error(`Brevo failed with status ${res.statusCode}: ${resData}`));
+                }
+            });
+        });
+
+        req.on("error", err => reject(err));
+        req.write(data);
+        req.end();
+    });
+};
+
 const sendResendEmail = (email, title, body) => {
     return new Promise((resolve, reject) => {
         const data = JSON.stringify({
@@ -46,6 +88,11 @@ const sendResendEmail = (email, title, body) => {
 // OTP ko mail me send kar sake isliye hmne mailsender create kiya.
 const mailSender = async (email, title, body) => {
     try {
+        if (process.env.BREVO_API_KEY) {
+            console.log("Sending email via Brevo API...");
+            return await sendBrevoEmail(email, title, body);
+        }
+
         if (process.env.RESEND_API_KEY) {
             console.log("Sending email via Resend API...");
             return await sendResendEmail(email, title, body);
