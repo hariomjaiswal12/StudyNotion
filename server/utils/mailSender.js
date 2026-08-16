@@ -27,6 +27,7 @@ const mailSender = async (email, title, body) => {
         return info;
     } catch (error) {
         console.log(error.message);
+        throw error;
     }
 }
 module.exports = mailSender;

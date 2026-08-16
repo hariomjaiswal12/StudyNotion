@@ -43,15 +43,13 @@ async function sendVerificationEmail(email,otp){
 }
 
 // pre save middleware --> document save hone se phle verification mail bhejna with given data.
-OTPSchema.pre("save",async function(next){ // explore why next pass as argument in function.
-    //await sendVerificationEmail(this.email, this.otp);  //verification mail
+OTPSchema.pre("save", async function(next){ // explore why next pass as argument in function.
     console.log("New document saved to database");
 
     if (this.isNew) {
-		sendVerificationEmail(this.email, this.otp);
+		await sendVerificationEmail(this.email, this.otp);
 	}
     next(); // next middleware me chale jao
-
 }) 
 
 module.exports = mongoose.model("OTP", OTPSchema);
